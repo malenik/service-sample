@@ -10,7 +10,16 @@ public interface IUserService<T, ID extends String> {
 
     List<T> findAll();
 
+    /*
+
+    Is it right to return a list of entitites by its identifier?
+    If yes - which of them we should to return after 'delete'?
+
     List<T> findById(ID id);
+
+    */
+
+    T findById(ID id);
 
     <S extends T> List<S> saveAll(Iterable<S> var1);
 
